@@ -34,17 +34,10 @@ function CompactCard({ param, setExpanded }) {
       layoutId="expandableCard"
       onClick={setExpanded}
     >
-      <div className="radialBar">
-        <CircularProgressbar
-          value={param.barValue}
-          text={`${param.barValue}%`}
-        />
         <span>{param.title}</span>
-      </div>
       <div className="detail">
         <Png />
         <span>${param.value}</span>
-        <span>Last 24 hours</span>
       </div>
     </motion.div>
   );
@@ -70,7 +63,7 @@ function ExpandedCard({ param, setExpanded }) {
       },
 
       fill: {
-        colors: ["#fff"],
+        colors: ["#E9A0A0"],
         type: "gradient",
       },
       dataLabels: {
@@ -78,7 +71,7 @@ function ExpandedCard({ param, setExpanded }) {
       },
       stroke: {
         curve: "smooth",
-        colors: ["white"],
+        colors: ["black"],
       },
       tooltip: {
         x: {

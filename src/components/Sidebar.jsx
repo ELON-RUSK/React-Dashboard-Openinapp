@@ -25,37 +25,39 @@ const Sidebar = () => {
       <div className="bars" style={expanded?{left: '60%'}:{left: '5%'}} onClick={()=>setExpaned(!expanded)}>
         <UilBars />
       </div>
-    <motion.div className='sidebar'
-    variants={sidebarVariants}
-    animate={window.innerWidth<=768?`${expanded}`:''}
-    >
-      {/* logo */}
-      <div className="logo">
-        <img src={Logo} alt="logo" />
-        <span>
-          Sh<span>o</span>ps
-        </span>
-      </div>
-
-      <div className="menu">
-        {SidebarData.map((item, index) => {
-          return (
-            <div
-              className={selected === index ? "menuItem active" : "menuItem"}
-              key={index}
-              onClick={() => setSelected(index)}
-            >
-              <item.icon />
-              <span>{item.heading}</span>
-            </div>
-          );
-        })}
-        {/* signoutIcon */}
-        <div className="menuItem">
-          <UilSignOutAlt />
+      
+      <motion.div className='sidebar'
+      variants={sidebarVariants}
+      animate={window.innerWidth<=768?`${expanded}`:''}
+      >
+        {/* logo */}
+        <div className="logo">
+          <p className="brand">
+            Board.
+          </p>
         </div>
-      </div>
-    </motion.div>
+        {/* menu */}
+        <div className="menu">
+          {SidebarData.map((item, index) => {
+            return (
+              <div
+                className={selected === index ? "menuItem active" : "menuItem"}
+                key={index}
+                onClick={() => setSelected(index)}
+              >
+                {/* {console.log(item.icon,"item")} */}
+                <item.icon />
+                {/* <img src={item.icon} alt={item.heading} /> */}
+                <span>{item.heading}</span>
+              </div>
+            );
+          })}
+          {/* signoutIcon */}
+          {/* <div className="menuItem">
+            <UilSignOutAlt />
+          </div> */}
+        </div>
+      </motion.div>
     </>
   );
 };

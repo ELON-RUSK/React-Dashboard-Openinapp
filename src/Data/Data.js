@@ -1,12 +1,24 @@
 // Sidebar imports
-import {
-  UilEstate,
-  UilClipboardAlt,
-  UilUsersAlt,
-  UilPackage,
-  UilChart,
-  UilSignOutAlt,
-} from "@iconscout/react-unicons";
+// import {
+//   UilEstate,
+//   UilClipboardAlt,
+//   UilUsersAlt,
+//   UilPackage,
+//   UilChart,
+//   UilSignOutAlt,
+// } from "@iconscout/react-unicons";
+
+import {ReactComponent as Dash1} from '../assets/dashboard_chart_icon.svg';
+import {ReactComponent as Dash2} from '../assets/dashboard_transaction_icon.svg';
+import {ReactComponent as Dash3} from '../assets/dashboard_schedule_icon.svg';
+import {ReactComponent as Dash4} from '../assets/dashboard_user_icon.svg';
+import {ReactComponent as Dash5} from '../assets/dashboard_setting_icon.svg';
+import {ReactComponent as Dash6} from '../assets/total_transactions_icon.svg';
+import {ReactComponent as Dash7} from '../assets/price_tag.svg';
+import {ReactComponent as Dash8} from '../assets/Lke.svg';
+import {ReactComponent as Dash9} from '../assets/people.svg';
+
+
 
 // Analytics Cards imports
 import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
@@ -20,38 +32,38 @@ import img3 from "../imgs/img3.png";
 // Sidebar Data
 export const SidebarData = [
   {
-    icon: UilEstate,
+    icon: Dash1,
     heading: "Dashboard",
   },
   {
-    icon: UilClipboardAlt,
-    heading: "Orders",
+    icon: Dash2,
+    heading: "Transactions",
   },
   {
-    icon: UilUsersAlt,
-    heading: "Customers",
+    icon: Dash3,
+    heading: "Schedules ",
   },
   {
-    icon: UilPackage,
-    heading: 'Products'
+    icon: Dash4,
+    heading: 'Users'
   },
   {
-    icon: UilChart,
-    heading: 'Analytics'
+    icon: Dash5,
+    heading: 'Settings'
   },
 ];
 
 // Analytics Cards Data
 export const cardsData = [
   {
-    title: "Sales",
+    title: "Total Revenues",
     color: {
-      backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
+      backGround: "#DDEFE0",
       boxShadow: "0px 10px 20px 0px #e0c6f5",
     },
     barValue: 70,
     value: "25,970",
-    png: UilUsdSquare,
+    png: Dash7,
     series: [
       {
         name: "Sales",
@@ -60,14 +72,14 @@ export const cardsData = [
     ],
   },
   {
-    title: "Revenue",
+    title: "Total Transactions",
     color: {
-      backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
+      backGround: "#F4ECDD",
       boxShadow: "0px 10px 20px 0px #FDC0C7",
     },
     barValue: 80,
     value: "14,270",
-    png: UilMoneyWithdrawal,
+    png: Dash6,
     series: [
       {
         name: "Revenue",
@@ -76,15 +88,15 @@ export const cardsData = [
     ],
   },
   {
-    title: "Expenses",
+    title: "Total Likes",
     color: {
       backGround:
-        "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
+        "#EFDADA",
       boxShadow: "0px 10px 20px 0px #F9D59B",
     },
     barValue: 60,
     value: "4,270",
-    png: UilClipboardAlt,
+    png: Dash8,
     series: [
       {
         name: "Expenses",
@@ -92,6 +104,23 @@ export const cardsData = [
       },
     ],
   },
+  {
+    title: "Total Users",
+    color: {
+      backGround:
+        "#DEE0EF",
+      boxShadow: "0px 10px 20px 0px #F9D59B",
+    },
+    barValue: 60,
+    value: "4,270",
+    png: Dash9,
+    series: [
+      {
+        name: "Expenses",
+        data: [10, 25, 15, 30, 12, 15, 20],
+      },
+    ],
+  }
 ];
 
 // Recent Update Card Data

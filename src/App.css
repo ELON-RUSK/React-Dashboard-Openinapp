@@ -12,19 +12,18 @@
 }
 
 .App {
-  /* padding: 0.5rem 3.5rem; */
+  padding: 2.5em;
   color: var(--black);
-  background: linear-gradient(
-    106.37deg,
-    #ffe1bc 29.63%,
-    #ffcfd1 51.55%,
-    #f3c6f1 90.85%
-  );
+  background: #db0a0a;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 
 .AppGlass {
@@ -34,8 +33,10 @@
   background: var(--glass);
   border-radius: 2rem;
   gap: 16px;
-  grid-template-columns: 11rem auto 20rem;
+  grid-template-columns: 17.5rem auto;
   overflow: hidden;
+  /* margin-left: 40px; */
+  /* margin-right: 60px; */
 }
 
 @media screen and (max-width: 1200px) {

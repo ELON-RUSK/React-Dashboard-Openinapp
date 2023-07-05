@@ -2,10 +2,11 @@ import React from "react";
 import Cards from "../Cards/Cards";
 import Table from "../Table/Table";
 import "./MainDash.css";
+import Navbar from "../Navbar/Navbar";
 const MainDash = () => {
   return (
     <div className="MainDash">
-      <h1>Dashboard</h1>
+      <Navbar/>
       <Cards />
       <Table />
     </div>
